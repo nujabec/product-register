@@ -23,11 +23,7 @@ services:
     image: postgres:15-bullseye
     volumes:
       - ./db-data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
       # localhost 以外で動かす場合に必要
       POSTGRES_HOST_AUTH_METHOD: trust
       
