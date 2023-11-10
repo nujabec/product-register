@@ -27,6 +27,8 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: 
+      # localhost 以外で動かす場合に必要
+      POSTGRES_HOST_AUTH_METHOD: trust
       
 
